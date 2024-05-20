@@ -1,0 +1,94 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+.play-btn.v1,
+.play-btn.v2,
+.bouns-anime {
+  position: relative;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 53px;
+  border-radius: 100px;
+  z-index: 1;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    z-index: -1;
+    user-select: none;
+    pointer-events: none;
+    @include transition;
+  }
+  &::before {
+    animation: b-zoom 4s ease-out infinite;
+  }
+  @keyframes b-zoom {
+    0% {
+      opacity: 0.8;
+      @include transform(scale(1));
+    }
+    100% {
+      @include transform(scale(1.3));
+      opacity: 0;
+    }
+  }
+  &:hover::before,
+  &:hover::after {
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+.play-btn {
+  &.v1 {
+    color: $color-black;
+    @include box-shadow(0 0 45px 0px rgba(0, 0, 0, 0.09));
+    &::after {
+      background: $color-white;
+    }
+    &::before {
+      border: 1px solid $color-white;
+      @include box-shadow(0 0 45px 0px rgba(0, 0, 0, 0.09));
+    }
+    &.bouns-anime::before {
+      background: $color-white;
+    }
+    &:hover {
+      color: $color-orange;
+    }
+  }
+  &.v2 {
+    color: $color-white;
+    &::before {
+      border: 1px solid $color-black;
+    }
+    &::after {
+      background: $color-black;
+    }
+    &.bouns-anime::before {
+      background: $color-black;
+    }
+    &:hover {
+      &::after {
+        background: $color-orange;
+      }
+      &::before {
+        border: 1px solid $color-orange;
+      }
+    }
+  }
+}
+
+.bouns-anime {
+  @include box-shadow(0 0 10px 0px rgba(0, 0, 0, 0.09));
+  &::before {
+    @include box-shadow(0 0 10px 0px rgba(0, 0, 0, 0.09));
+  }
+}

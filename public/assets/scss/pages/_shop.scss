@@ -1,0 +1,172 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*=====================
+    19 Shop
+=======================*/
+.shop {
+  &.v1 {
+    .categories-short,
+    .categories-btn-count,
+    .categories-btns {
+      @include d-flex;
+      @include align-items;
+      @include flex-wrap;
+    }
+    .categories-btns {
+      gap: 20px;
+      button {
+        font-size: 18px;
+        color: $color-black;
+        &.active,
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+    .shop-card-rating,
+    .card-pricing {
+      @include d-flex;
+      @include align-items;
+      @include flex-wrap;
+      gap: 10px;
+    }
+    .shop-img {
+      overflow: hidden;
+      img {
+        margin: 0 auto;
+        @include transition;
+      }
+      .tag {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-weight: 700;
+        padding: 3px 12px;
+        border-radius: 5px;
+        text-transform: capitalize;
+        color: $color-white;
+        z-index: 1;
+        &.tag-black {
+          background: $color-black;
+        }
+        &.tag-orange {
+          background: $color-orange;
+        }
+      }
+    }
+    .shop-card-rating {
+      @include justify-content-between;
+    }
+    .card-pricing .price {
+      color: $color-orange;
+    }
+    .shop-card {
+      text-align: center;
+      margin-top: 30px;
+      .star-mark,
+      .card-pricing {
+        @include justify-content-center;
+      }
+      .shop-img {
+        position: relative;
+        padding: 52px 30px;
+        background: $color-white3;
+        border-radius: 5px;
+        height: 272px;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          background: $color-black;
+          @include transition;
+          z-index: 1;
+        }
+        .link-anime {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          opacity: 0;
+          visibility: hidden;
+          @include transform(translate(-50%, 0%));
+          z-index: 1;
+        }
+      }
+      .shop-content {
+        padding: 20px 20px 0px 20px;
+        .star-mark ~ .text-5 {
+          margin-top: 10px;
+        }
+        .text-5 ~ .card-pricing {
+          margin-top: 5px;
+        }
+      }
+      &:hover {
+        .shop-img {
+          &::before {
+            opacity: 0.8;
+          }
+          .link-anime {
+            opacity: 1;
+            visibility: visible;
+            @include transform(translate(-50%, -50%));
+          }
+        }
+      }
+    }
+    .shop-items-list li,
+    .shop-card {
+      &:hover .shop-img img {
+        @include transform(scale(1.1));
+      }
+    }
+    .row > div:nth-child(1) .shop-card {
+      margin-top: 0;
+    }
+
+    .categories-short {
+      @include justify-content-between;
+    }
+    .categories-short,
+    .categories-btn-count {
+      gap: 30px;
+    }
+
+    .shop-items-list {
+      & > li {
+        position: relative;
+        border-radius: 5px;
+        border: 1px solid $color-border;
+        background: $color-white3;
+        z-index: 1;
+        & ~ li {
+          margin-top: 30px;
+        }
+      }
+      .shop-img {
+        padding: 30px;
+        background: $color-white;
+        img {
+          max-width: 210px;
+          width: 100%;
+        }
+      }
+      .shop-content {
+        padding: 30px;
+        .shop-card-rating ~ .text-5 {
+          margin-top: 10px;
+        }
+        .text-5 ~ .text-para-xl-1 {
+          margin-top: 20px;
+        }
+        .text-para-xl-1 ~ .link-anime {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+}

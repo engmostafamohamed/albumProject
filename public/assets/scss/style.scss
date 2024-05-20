@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+// Abstracts
+@use "./abstracts/variables";
+@use "./abstracts/autoprefixer";
+
+// Base
+@forward "./base/default";
+@forward "./base/typography";
+
+// Components
+@forward "./components/section-title";
+@forward "./components/buttons";
+@forward "./components/point-list";
+@forward "./components/play-anime-btn";
+@forward "./components/check-mark-list";
+@forward "./components/progress-bar";
+@forward "./components/slider-default";
+@forward "./components/bg-cover";
+@forward "./components/star-mark";
+@forward "./components/my-select";
+@forward "./components/sidebar-widgets";
+@forward "./components/tags-links";
+@forward "./components/breadcum";
+@forward "./components/pagination";
+@forward "./components/social-link";
+@forward "./components/bottom-top";
+
+// Layout
+@forward "./layout/header";
+
+// Pages
+@forward "./pages/home-1";
+@forward "./pages/home-2";
+@forward "./pages/home-3";
+@forward "./pages/service-details";
+@forward "./pages/shop";
+@forward "./pages/shop-details";
+@forward "./pages/project-details";
+@forward "./pages/team-details";
+@forward "./pages/blog-details";
+@forward "./pages/card";
+@forward "./pages/card-details";
+@forward "./pages/login-sign-up";
+@forward "./pages/404";
+
+// Layout
+@forward "./layout/footer";

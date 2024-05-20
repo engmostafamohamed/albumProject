@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*========================
+    21 Project Details
+==========================*/
+
+.project-details {
+  &.v1 {
+    .title-social,
+    .share-social,
+    .category-list li,
+    .option-list,
+    .box-imgs {
+      @include d-flex;
+      @include align-items;
+      @include flex-wrap;
+    }
+    .title-social,
+    .share-social {
+      gap: 15px;
+    }
+    .title-social {
+      @include justify-content-between;
+    }
+    .category-list {
+      li {
+        padding: 20px;
+        border-radius: 5px;
+        background-color: $color-white3;
+        gap: 10px;
+        & ~ li {
+          margin-top: 20px;
+        }
+        a {
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          line-height: 42px;
+          font-size: 15px;
+          border-radius: 50px;
+          background-color: $color-black;
+          color: $color-white;
+        }
+      }
+    }
+    .big-img,
+    .box-imgs {
+      img {
+        width: 100%;
+        border-radius: 20px;
+      }
+    }
+    .box-imgs,
+    .option-list {
+      gap: 30px;
+    }
+    .box-imgs {
+      .box-img-left,
+      .box-img-right {
+        width: 100%;
+      }
+    }
+  }
+}

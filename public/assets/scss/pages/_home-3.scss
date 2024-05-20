@@ -1,0 +1,128 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*=====================
+    15 Category List
+=======================*/
+
+.category-list {
+  &.v1 {
+    .category-menu {
+      li ~ li {
+        margin-top: 30px;
+      }
+      a {
+        display: block;
+        padding: 30px;
+        font-size: 20px;
+        border: 1px solid $color-border;
+        border-radius: 5px;
+        i {
+          font-size: 24px;
+          & ~ .text-xl-5 {
+            margin-top: 21px;
+          }
+        }
+        .text-xl-5 {
+          display: block;
+        }
+        &:hover {
+          color: $color-white;
+          border: 1px solid $color-orange;
+          background: $color-orange;
+        }
+      }
+    }
+  }
+}
+
+/*=====================
+    17 Pricing Pack
+=======================*/
+
+.pricing-pack {
+  &.v1 {
+    .all-btns {
+      padding: 5px;
+      border-radius: 5px;
+      gap: 5px;
+      background: $color-white3;
+      .btn-anime {
+        padding: 12.5px 27.65px;
+        font-weight: 700;
+        font-size: 15px;
+        &.active,
+        &:hover {
+          color: $color-white;
+          background: $color-orange;
+        }
+      }
+    }
+    .price-card {
+      padding: 30px;
+      border: 1px solid $color-border;
+      border-radius: 5px;
+      text-align: center;
+      background: $color-white;
+      margin-top: 30px;
+      &,
+      .text-xl-3,
+      .text-para-xl-1,
+      i {
+        @include transition;
+      }
+      &:hover {
+        border: 1px solid $color-black;
+        background: $color-black;
+        .text-xl-3,
+        .text-para-xl-1,
+        i {
+          color: $color-white;
+        }
+        .link-anime {
+          color: $color-white;
+          background: $color-orange;
+          &:hover {
+            color: $color-orange;
+            background: $color-white;
+          }
+        }
+      }
+    }
+    .price-card-header {
+      .text-xl-3 ~ .text-para-xl-1 {
+        margin-top: 5px;
+      }
+      & ~ .price-card-body {
+        margin-top: 30px;
+      }
+    }
+    .price-card-body {
+      i {
+        font-size: 30px;
+        color: $color-black;
+      }
+      i ~ .text-xl-3,
+      .text-xl-3 ~ .price-point-list {
+        margin-top: 15px;
+      }
+      .price-point-list ~ .link-anime {
+        margin-top: 30px;
+      }
+    }
+    .price-point-list {
+      li ~ li {
+        margin-top: 15px;
+      }
+      p {
+        color: $color-black;
+      }
+    }
+    .link-anime {
+      padding: 12.5px 79.45px;
+    }
+    .row > div:nth-child(1) .price-card {
+      margin-top: 0;
+    }
+  }
+}

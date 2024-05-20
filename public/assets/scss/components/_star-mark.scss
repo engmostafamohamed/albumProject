@@ -1,0 +1,39 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+.star-mark {
+  @include d-flex;
+  @include align-items;
+  gap: 8px;
+  i {
+    font-size: 19px;
+    color: $color-orange;
+  }
+  &.star-1 li:nth-child(1) i::before,
+  &.star-2 li:nth-child(1) i::before,
+  &.star-2 li:nth-child(2) i::before,
+  &.star-3 li:nth-child(1) i::before,
+  &.star-3 li:nth-child(2) i::before,
+  &.star-3 li:nth-child(3) i::before,
+  &.star-4 li:nth-child(1) i::before,
+  &.star-4 li:nth-child(2) i::before,
+  &.star-4 li:nth-child(3) i::before,
+  &.star-4 li:nth-child(4) i::before,
+  &.star-5 li:nth-child(1) i::before,
+  &.star-5 li:nth-child(2) i::before,
+  &.star-5 li:nth-child(3) i::before,
+  &.star-5 li:nth-child(4) i::before,
+  &.star-5 li:nth-child(5) i::before {
+    content: "\e93a";
+  }
+}
+
+.star-retting {
+  @include d-flex;
+  @include align-items;
+  @include flex-wrap;
+  gap: 15px;
+  h5 {
+    font-weight: 700;
+  }
+}

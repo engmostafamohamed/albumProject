@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*======================
+    25 Login Sign Up
+========================*/
+
+.login-sign-up {
+  &.v1 {
+    .main-form {
+      padding: 30px;
+      max-width: 770px;
+      border: 1px solid $color-border;
+      border-radius: 5px;
+      background: $color-white;
+      margin: 0 auto;
+      .form-box {
+        input,
+        textarea {
+          width: 100%;
+          padding: 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 1px solid $color-border;
+        }
+        input {
+          height: 50px;
+          &[type="number"] {
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+            appearance: textfield;
+          }
+        }
+        textarea {
+          height: 120px;
+        }
+      }
+      .group-form-box .form-box ~ .form-box {
+        margin-top: 30px;
+      }
+      .check-box {
+        @include d-flex;
+        gap: 10px;
+        input {
+          padding: 0;
+          width: 14px;
+          height: 14px;
+          min-width: 14px;
+          border-radius: 1px;
+          border: 1px solid $color-border;
+          margin-top: 2px;
+          &:checked {
+            background-color: $color-orange;
+            border-color: $color-orange;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        label {
+          width: calc(100% - 20px);
+          color: $color-gBlack;
+          font-size: 16px;
+          line-height: 26px;
+          margin-top: -5px;
+        }
+      }
+      .btn-anime {
+        display: block;
+        width: 100%;
+      }
+      .link-anime {
+        @include d-flex;
+        @include align-items;
+        @include flex-wrap;
+        @include justify-content-center;
+        gap: 15px;
+      }
+      .or-line {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 1px;
+          top: 50%;
+          left: 0;
+          background: $color-border;
+          @include transform(translateY(-50%));
+          z-index: -1;
+        }
+        span {
+          display: inline-block;
+          padding: 12px;
+          background: $color-white;
+        }
+      }
+    }
+  }
+}

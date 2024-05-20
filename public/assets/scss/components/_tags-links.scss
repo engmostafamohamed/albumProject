@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+.tags-links {
+  &.v1,
+  &.v2 {
+    @include d-flex;
+    @include flex-wrap;
+    gap: 10px;
+    a {
+      display: inline-block;
+      padding: 12.5px 20px;
+      color: $color-black;
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: 5px;
+    }
+  }
+  &.v1 a {
+    background: $color-white;
+  }
+  &.v2 a {
+    background: $color-white3;
+  }
+  &.v1 a:hover,
+  &.v2 a:hover {
+    color: $color-white;
+    background: $color-orange;
+  }
+}

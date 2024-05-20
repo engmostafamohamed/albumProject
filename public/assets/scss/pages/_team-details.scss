@@ -1,0 +1,79 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*=====================
+    21 Team Details
+=======================*/
+.team-details {
+  &.v1 {
+    .profile-img img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .profile-content {
+      margin-top: 50px;
+      .pro-tag {
+        display: inline-block;
+        padding: 8px 20px;
+        border-radius: 5px;
+        color: $color-white;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.6;
+        background: $color-orange;
+      }
+      .info-list-data {
+        li ~ li {
+          margin-top: 20px;
+        }
+        .text-bold {
+          color: $color-black;
+        }
+      }
+      .contact-box {
+        @include justify-content-between;
+        padding: 20px 25px;
+        border-radius: 10px;
+        background: $color-black;
+        &,
+        .call-link {
+          @include d-flex;
+          @include align-items;
+          @include flex-wrap;
+          gap: 30px;
+        }
+        .text-5,
+        .text-5 a,
+        .text-para-1,
+        .text-para-1 a {
+          color: $color-white;
+        }
+        .text-5 a:hover,
+        .text-para-1 a:hover {
+          color: $color-orange;
+        }
+        .call-link {
+          font-size: 16px;
+          line-height: 1.6;
+          font-weight: 700;
+          color: $color-white;
+          i {
+            display: inline-block;
+            min-width: 40px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            border-radius: 40px;
+            line-height: 40px;
+            background: $color-orange;
+            @include transition;
+          }
+          &:hover i {
+            color: $color-orange;
+            background: $color-white;
+          }
+        }
+      }
+    }
+  }
+}

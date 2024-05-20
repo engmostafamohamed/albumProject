@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+.point-list {
+  &.v1,
+  &.v2 {
+    .text-para-1 {
+      position: relative;
+      padding-left: 20px;
+      font-size: 15px;
+      line-height: 25px;
+      font-weight: 700;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        top: 8px;
+        left: 0;
+        border-radius: 50px;
+      }
+    }
+  }
+  &.v1 {
+    @include d-flex;
+    @include flex-wrap;
+    padding-top: 35px;
+    border-top: 1px solid $color-border;
+    gap: 20px;
+    li .text-para-1::before {
+      background: $color-orange;
+    }
+  }
+  &.v2 {
+    li {
+      & ~ li {
+        margin-top: 10px;
+      }
+      .text-para-1::before {
+        border: 2px solid $color-orange;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+.link-anime,
+.btn-anime {
+  &.v1,
+  &.v2,
+  &.v3,
+  &.v4,
+  &.v5,
+  &.v6,
+  &.v7,
+  &.v8,
+  &.v9,
+  &.v10,
+  &.v11 {
+    @include d-inline-flex;
+    @include align-items;
+    @include justify-content-between;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+  &.round-border-small {
+    border-radius: 5px;
+  }
+  &.round-border-full {
+    border-radius: 50px;
+  }
+  &.v1,
+  &.v7,
+  &.v9 {
+    color: $color-white;
+    background: $color-orange;
+    &:hover {
+      background: $color-black;
+    }
+  }
+  &.v2,
+  &.v8,
+  &.v10 {
+    color: $color-white;
+    background: $color-black;
+    &:hover {
+      background: $color-orange;
+    }
+  }
+  &.v3,
+  &.v5 {
+    color: $color-black;
+    background: $color-white;
+    &:hover {
+      color: $color-white;
+      background: $color-orange;
+    }
+  }
+  &.v4,
+  &.v6 {
+    color: $color-white;
+    background: $color-orange;
+    &:hover {
+      color: $color-black;
+      background: $color-white;
+    }
+  }
+  &.v5 {
+    gap: 15px;
+    border: 1px solid $color-border;
+    &:hover {
+      border: 1px solid $color-orange;
+    }
+  }
+  &.v6 {
+    gap: 15px;
+    border: 1px solid $color-orange;
+    &:hover {
+      border: 1px solid $color-border;
+    }
+  }
+  &.v7 {
+    &::before,
+    &::after {
+      border: 2px solid $color-orange;
+    }
+  }
+  &.v8 {
+    &::before,
+    &::after {
+      border: 2px solid $color-black;
+    }
+  }
+  &.v7,
+  &.v8 {
+    position: relative;
+    margin: 6px;
+    z-index: 1;
+    &::before,
+    &::after {
+      pointer-events: none;
+      position: absolute;
+      content: "";
+      width: 21px;
+      height: 20px;
+      @include transition;
+    }
+    &::before {
+      top: -6px;
+      left: -6px;
+      border-bottom-color: $color-tr;
+      border-right-color: $color-tr;
+    }
+    &::after {
+      bottom: -6px;
+      right: -6px;
+      border-top-color: $color-tr;
+      border-left-color: $color-tr;
+    }
+    &:hover {
+      &::before,
+      &::after {
+        opacity: 0;
+        border-radius: 5px;
+      }
+      &::before {
+        top: 1px;
+        left: 1px;
+      }
+      &::after {
+        bottom: 1px;
+        right: 1px;
+      }
+    }
+  }
+  &.v9,
+  &.v10 {
+    padding: 12.5px 29.45px;
+    text-transform: uppercase;
+  }
+  &.v11 {
+    color: $color-black;
+    border: 1px solid $color-border;
+    background: $color-tr;
+    &:hover {
+      color: $color-white;
+      border: 1px solid $color-black;
+      background: $color-black;
+    }
+  }
+}
+
+.link-anime:not(.v9, .v10) {
+  padding: 15px 30px;
+}
+.btn-anime:not(.v9, .v10) {
+  padding: 15px 28px;
+}
+
+.all-btns {
+  @include d-flex;
+  @include align-items;
+  @include flex-wrap;
+  gap: 20px;
+}

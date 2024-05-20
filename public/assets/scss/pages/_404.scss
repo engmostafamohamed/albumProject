@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*=====================
+    26 Eroor Page
+=======================*/
+
+.erorr-section {
+  &.v1 {
+    .main-content {
+      text-align: center;
+    }
+    .search-container {
+      @include d-flex;
+      @include align-items;
+      @include justify-content-between;
+      @include flex-wrap;
+      position: relative;
+      max-width: 475px;
+      border-radius: 5px;
+      background: $color-white4;
+      margin: 35px auto 0 auto;
+      input {
+        width: calc(100% - 85px);
+        height: 60px;
+        font-size: 16px;
+        background: $color-tr;
+      }
+      .search-btn {
+        position: absolute;
+        top: 18px;
+        right: 26px;
+        color: $color-gBlack;
+        font-size: 22px;
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+/*====================
+	 Default
+======================*/
+*,
+*::before,
+*::after,
+.list-style-default,
+.list-style-sm-default,
+.list-style-md-default,
+.list-style-lg-default,
+.list-style-xl-default,
+.list-style-xxl-default,
+.text-1,
+.text-2,
+.text-3,
+.text-4,
+.text-5,
+.text-6,
+.text-para-1,
+.text-para-2,
+.text-sm-1,
+.text-sm-2,
+.text-sm-3,
+.text-sm-4,
+.text-sm-5,
+.text-sm-6,
+.text-para-sm-1,
+.text-para-sm-2,
+.text-md-1,
+.text-md-2,
+.text-md-3,
+.text-md-4,
+.text-md-5,
+.text-md-6,
+.text-para-md-1,
+.text-para-md-2,
+.text-lg-1,
+.text-lg-2,
+.text-lg-3,
+.text-lg-4,
+.text-lg-5,
+.text-lg-6,
+.text-para-lg-1,
+.text-para-lg-2,
+.text-xl-1,
+.text-xl-2,
+.text-xl-3,
+.text-xl-4,
+.text-xl-5,
+.text-xl-6,
+.text-para-xl-1,
+.text-para-xl-2,
+.text-xxl-1,
+.text-xxl-2,
+.text-xxl-3,
+.text-xxl-4,
+.text-xxl-5,
+.text-xxl-6,
+.text-para-xxl-1,
+.text-para-xxl-2,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  content: "";
+  content: none;
+}
+button {
+  &,
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    outline: none;
+    background: inherit;
+    min-width: inherit;
+  }
+}
+article,
+aside,
+footer,
+header,
+nav,
+section,
+img,
+svg,
+video,
+canvas,
+audio,
+pre,
+iframe,
+embed,
+object {
+  display: block;
+}
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  vertical-align: middle;
+}
+blockquote,
+q {
+  quotes: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+iframe {
+  max-width: 100%;
+}
+del {
+  text-decoration: line-through;
+}
+pre {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+textarea {
+  resize: initial;
+}
+b,
+strong {
+  font-weight: 700;
+}
+blockquote,
+q {
+  quotes: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+input,
+.uneditable-input,
+select,
+textarea {
+  min-width: auto;
+  box-sizing: border-box;
+  line-height: 1.6;
+  height: 50px;
+  padding: 0px 20px;
+  vertical-align: middle;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0em rgba(0, 123, 255, 0.25);
+  }
+}
+input {
+  height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: none;
+}
+input[type="submit"],
+input[type="button"] {
+  cursor: pointer;
+}

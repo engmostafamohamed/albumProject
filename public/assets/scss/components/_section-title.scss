@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+.section-title,
+.section-title-center,
+.section-title-white,
+.section-title-center-white {
+  &.v1,
+  &.v2 {
+    br {
+      display: none;
+    }
+    .text-xl-6.sub-title-shap {
+      position: relative;
+      display: inline-block;
+      padding-left: 26px;
+      &::before {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 3px;
+        top: 12px;
+        left: 0;
+        border-radius: 30px;
+        background: $color-orange;
+      }
+    }
+  }
+  &.v1 .text-xl-6 ~ .text-xl-3,
+  &.v1 .text-xl-3 ~ .text-para-xl-1,
+  &.v2 .text-xl-3 ~ .text-para-xl-1,
+  &.v2 .text-xl-6 ~ .text-xl-3 {
+    margin-top: 5px;
+  }
+}
+
+.section-title,
+.section-title-center {
+  &.v1 .text-xl-6,
+  &.v2 .text-xl-6 {
+    color: $color-orange;
+  }
+}
+
+.section-title-center,
+.section-title-center-white {
+  text-align: center;
+  .text-xl-6,
+  .text-xl-3,
+  .text-para-xl-1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.section-title-white,
+.section-title-center-white {
+  &.v1 .text-xl-6,
+  &.v1 .text-xl-3,
+  &.v2 .text-xl-6,
+  &.v2 .text-xl-3 {
+    color: $color-white;
+  }
+  &.v1,
+  &.v2 {
+    .text-para-xl-1 {
+      color: $color-white2;
+    }
+  }
+}
+
+.title-left-right {
+  & > div ~ .all-btns {
+    margin-top: 30px;
+  }
+  &.align-start,
+  &.align-center,
+  &.align-end {
+    @include d-flex;
+    @include flex-wrap;
+    @include justify-content-between;
+    gap: 15px;
+  }
+  &.align-start {
+    @include align-items-start;
+  }
+  &.align-center {
+    @include align-items;
+  }
+  &.align-end {
+    @include align-items-end;
+  }
+}

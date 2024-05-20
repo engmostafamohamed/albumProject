@@ -1,0 +1,374 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*=========================
+    12 Our Blog Details
+===========================*/
+
+.our-blog-details {
+  &.v1 {
+    .post-big-img img {
+      width: 100%;
+      border-radius: 5px 5px 0px 0px;
+    }
+    .info-list {
+      gap: 10px;
+      @include justify-content-between;
+      &,
+      li {
+        @include d-flex;
+        @include flex-wrap;
+      }
+      li {
+        @include align-items;
+        gap: 10px;
+      }
+      & ~ .text-5 {
+        margin-top: 20px;
+      }
+      .post-user img {
+        width: 30px;
+        border-radius: 50px;
+      }
+      .post-date {
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        width: 58px;
+        height: 64px;
+        top: 0;
+        border-radius: 5px;
+        margin-top: -52px;
+        margin-right: 15px;
+        clip-path: polygon(73% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+        z-index: 1;
+        background: $color-orange;
+        @include transition;
+        .text-para-xl-1 {
+          color: $color-white;
+          font-weight: 700;
+          line-height: 16px;
+          span {
+            display: block;
+            line-height: 30px;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+
+    .by-michael {
+      padding: 30px 15px;
+      text-align: center;
+      border: 1px solid $color-orange;
+      border-radius: 5px;
+      i {
+        font-size: 30px;
+        color: $color-orange;
+      }
+      i ~ .text-para-xl-1,
+      .text-para-xl-1 ~ .text-6 {
+        margin-top: 20px;
+      }
+    }
+    .tags-links {
+      padding: 20px 0px;
+      border-top: 1px solid $color-border;
+      border-bottom: 1px solid $color-border;
+    }
+    .prev-post,
+    .next-post {
+      display: inline-block;
+      padding: 25px 18px;
+      border-radius: 5px;
+      color: $color-black;
+      border: 2px solid $color-border;
+      .icon-text ~ .text-6 {
+        display: inline-block;
+        margin-top: 5px;
+      }
+      &:hover {
+        border: 2px solid $color-orange;
+      }
+    }
+    .next-post {
+      text-align: right;
+    }
+    .prev-post ~ .next-post {
+      margin-top: 15px;
+    }
+    .comment-boxs {
+      & > li ~ li {
+        margin-top: 30px;
+      }
+      li,
+      .comment-info {
+        @include d-flex;
+        @include flex-wrap;
+        gap: 20px;
+      }
+      .profile-img {
+        min-width: 70px;
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          @include object-fit;
+          @include object-position;
+        }
+      }
+      .comment-info {
+        @include justify-content-between;
+        .reply-btn {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 1.6;
+        }
+      }
+      .comment-boxs {
+        padding-left: 15px;
+      }
+    }
+    .comments-form {
+      border: 1px solid $color-border;
+      border-radius: 20px;
+      padding: 30px;
+      .text-para-2 {
+        color: $color-black;
+      }
+      .form-box {
+        input,
+        textarea {
+          width: 100%;
+          padding: 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 1px solid $color-border;
+        }
+        input {
+          height: 50px;
+        }
+        textarea {
+          height: 120px;
+        }
+      }
+      .check-box {
+        @include d-flex;
+        gap: 10px;
+        input {
+          padding: 0;
+          width: 14px;
+          height: 14px;
+          min-width: 14px;
+          border-radius: 1px;
+          border: 1px solid $color-border;
+          margin-top: 2px;
+          &:checked {
+            background-color: $color-or@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*=========================
+    12 Our Blog Details
+===========================*/
+
+.our-blog-details {
+  &.v1 {
+    .post-big-img img {
+      width: 100%;
+      border-radius: 5px 5px 0px 0px;
+    }
+    .info-list {
+      gap: 10px;
+      @include justify-content-between;
+      &,
+      li {
+        @include d-flex;
+        @include flex-wrap;
+      }
+      li {
+        @include align-items;
+        gap: 10px;
+      }
+      & ~ .text-5 {
+        margin-top: 20px;
+      }
+      .post-user img {
+        width: 30px;
+        border-radius: 50px;
+      }
+      .post-date {
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        width: 58px;
+        height: 64px;
+        top: 0;
+        border-radius: 5px;
+        margin-top: -52px;
+        margin-right: 15px;
+        clip-path: polygon(73% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+        z-index: 1;
+        background: $color-orange;
+        @include transition;
+        .text-para-xl-1 {
+          color: $color-white;
+          font-weight: 700;
+          line-height: 16px;
+          span {
+            display: block;
+            line-height: 30px;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+
+    .by-michael {
+      padding: 30px 15px;
+      text-align: center;
+      border: 1px solid $color-orange;
+      border-radius: 5px;
+      i {
+        font-size: 30px;
+        color: $color-orange;
+      }
+      i ~ .text-para-xl-1,
+      .text-para-xl-1 ~ .text-6 {
+        margin-top: 20px;
+      }
+    }
+    .tags-links {
+      padding: 20px 0px;
+      border-top: 1px solid $color-border;
+      border-bottom: 1px solid $color-border;
+    }
+    .prev-post,
+    .next-post {
+      display: inline-block;
+      padding: 25px 18px;
+      border-radius: 5px;
+      color: $color-black;
+      border: 2px solid $color-border;
+      .icon-text ~ .text-6 {
+        display: inline-block;
+        margin-top: 5px;
+      }
+      &:hover {
+        border: 2px solid $color-orange;
+      }
+    }
+    .next-post {
+      text-align: right;
+    }
+    .prev-post ~ .next-post {
+      margin-top: 15px;
+    }
+    .comment-boxs {
+      & > li ~ li {
+        margin-top: 30px;
+      }
+      li,
+      .comment-info {
+        @include d-flex;
+        @include flex-wrap;
+        gap: 20px;
+      }
+      .profile-img {
+        min-width: 70px;
+        width: 70px;
+        height: 70px;
+        border-radius: 100px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          @include object-fit;
+          @include object-position;
+        }
+      }
+      .comment-info {
+        @include justify-content-between;
+        .reply-btn {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 1.6;
+        }
+      }
+      .comment-boxs {
+        padding-left: 15px;
+      }
+    }
+    .comments-form {
+      border: 1px solid $color-border;
+      border-radius: 20px;
+      padding: 30px;
+      .text-para-2 {
+        color: $color-black;
+      }
+      .form-box {
+        input,
+        textarea {
+          width: 100%;
+          padding: 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 1px solid $color-border;
+        }
+        input {
+          height: 50px;
+        }
+        textarea {
+          height: 120px;
+        }
+      }
+      .check-box {
+        @include d-flex;
+        gap: 10px;
+        input {
+          padding: 0;
+          width: 14px;
+          height: 14px;
+          min-width: 14px;
+          border-radius: 1px;
+          border: 1px solid $color-border;
+          margin-top: 2px;
+          &:checked {
+            background-color: $color-orange;
+            border-color: $color-orange;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        label {
+          width: calc(100% - 20px);
+          color: $color-gBlack;
+          font-size: 16px;
+          line-height: 26px;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}
+ange;
+            border-color: $color-orange;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        label {
+          width: calc(100% - 20px);
+          color: $color-gBlack;
+          font-size: 16px;
+          line-height: 26px;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}

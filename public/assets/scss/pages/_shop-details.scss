@@ -1,0 +1,224 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*=====================
+      19 Shop Details
+  =======================*/
+.shop-details {
+  &.v1 {
+    .display-left {
+      .slider {
+        padding-bottom: 0;
+      }
+      img {
+        width: 100%;
+      }
+      .big-box-img {
+        .slider {
+          max-width: 500px;
+          width: 100%;
+          margin: 0 auto;
+        }
+        img {
+          border-radius: 5px;
+        }
+      }
+      .small-box-img {
+        padding: 15px 20px;
+        .swiper-slide img {
+          width: 100%;
+        }
+        border-radius: 5px;
+        border: 1px solid $color-border;
+        text-align: center;
+        .next-btn,
+        .prev-btn {
+          display: none;
+        }
+      }
+    }
+    .shop-card-rating,
+    .shop-card-rating .card-pricing,
+    .quan-card,
+    .quantity-count,
+    .shop-services,
+    .shop-services li {
+      @include d-flex;
+      @include align-items;
+      @include flex-wrap;
+    }
+    .shop-card-rating {
+      @include justify-content-between;
+      gap: 30px;
+    }
+    .shop-card-rating .card-pricing,
+    .quan-card,
+    .quantity-count {
+      gap: 10px;
+    }
+    .shop-card-rating {
+      .card-pricing {
+        .price {
+          color: $color-orange;
+        }
+      }
+    }
+    .quantity-count {
+      padding: 10px;
+      border: 1px solid $color-border;
+      border-radius: 2px;
+      @include justify-content-between;
+      button {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 10px;
+        border-radius: 50px;
+        background: $color-white3;
+      }
+      .count-numbber {
+        font-size: 16px;
+        font-weight: 700;
+      }
+    }
+    .shop-services {
+      @include justify-content-between;
+      &,
+      li {
+        gap: 15px;
+      }
+      i {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 100px;
+        color: $color-orange;
+        background: $color-white3;
+      }
+      .contetn {
+        .text-6 ~ .text-para-1 {
+          margin-top: 5px;
+        }
+      }
+    }
+    .shop-tab-btns {
+      @include d-flex;
+      @include flex-wrap;
+      gap: 20px;
+      .btn-anime {
+        color: $color-black;
+        background: $color-white3;
+        &.active,
+        &:hover {
+          color: $color-white;
+          background: $color-orange;
+        }
+      }
+    }
+    .additional-info {
+      @include d-flex;
+      @include flex-wrap;
+      gap: 50px;
+      .main-title {
+        color: $color-orange;
+      }
+      .main-title ~ ul,
+      .info-list li ~ li {
+        margin-top: 15px;
+      }
+      .info-list .text-bold {
+        color: $color-black;
+      }
+    }
+    .reviews {
+      padding: 32px 20px;
+    }
+    .reviews,
+    .review-card,
+    .review-form .form-box input,
+    .review-form .form-box textarea {
+      border: 1px solid $color-border;
+      border-radius: 5px;
+    }
+    .review-card {
+      padding: 20px;
+      & ~ .review-card {
+        margin-top: 20px;
+      }
+      .review-profile {
+        &,
+        .profile-content {
+          @include d-flex;
+          @include align-items;
+          @include flex-wrap;
+          gap: 10px;
+        }
+        img {
+          min-width: 50px;
+          width: 50px;
+          height: 50px;
+          border-radius: 100px;
+          @include object-fit;
+          @include object-position;
+        }
+        .profile-content {
+          width: calc(100% - 60px);
+          @include justify-content-between;
+        }
+      }
+      .content-left .text-6 ~ .text-para-1 {
+        margin-top: 5px;
+      }
+      .reply-btn {
+        font-weight: 700;
+        color: $color-black;
+      }
+    }
+    .review-form {
+      .form-box {
+        input,
+        textarea {
+          width: 100%;
+          padding: 20px;
+          font-size: 16px;
+        }
+        input {
+          height: 50px;
+        }
+        textarea {
+          height: 120px;
+        }
+      }
+      .check-box {
+        @include d-flex;
+        gap: 10px;
+        input {
+          padding: 0;
+          width: 14px;
+          height: 14px;
+          min-width: 14px;
+          border-radius: 1px;
+          border: 1px solid $color-border;
+          margin-top: 2px;
+          &:checked {
+            background-color: $color-orange;
+            border-color: $color-orange;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        label {
+          width: calc(100% - 20px);
+          color: $color-gBlack;
+          font-size: 16px;
+          line-height: 26px;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}

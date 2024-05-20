@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+.breadcum.v1 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    background: $color-black;
+    z-index: -1;
+  }
+  .text-xl-3 {
+    color: $color-white;
+  }
+  .breadcum-list {
+    border-top: 1px solid $color-border2;
+  }
+  ul {
+    @include d-flex;
+    @include align-items;
+    @include justify-content-center;
+    @include flex-wrap;
+    gap: 5px;
+    color: $color-white;
+    font-weight: 600;
+    &::before {
+      content: "\e923";
+      font-family: "icomoon";
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      margin-right: 15px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: $color-white;
+    }
+  }
+  li {
+    & ~ li {
+      @include d-flex;
+      @include align-items;
+      gap: 5px;
+      &::before {
+        content: "-";
+        color: $color-white;
+      }
+    }
+  }
+  a {
+    display: block;
+    color: $color-white;
+    &:hover {
+      color: $color-orange;
+    }
+  }
+}

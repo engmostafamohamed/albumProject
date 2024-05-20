@@ -1,0 +1,158 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*=====================
+    13 Future Cards
+=======================*/
+.future-cards {
+  &.v1 {
+    .future-card {
+      position: relative;
+      padding: 35px;
+      text-align: center;
+      border-bottom: 5px solid $color-tr;
+      border-radius: 20px;
+      background: $color-white;
+      box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+      @include transition;
+      i {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+        line-height: 60px;
+        border-radius: 100px;
+        color: $color-white;
+        background: $color-black;
+        @include transition;
+        & ~ .future-card-body {
+          margin-top: 15px;
+        }
+      }
+      .future-card-body {
+        .text-6 {
+          font-weight: 700;
+          & ~ .text-para-xl-1 {
+            margin-top: 10px;
+          }
+        }
+      }
+      &:hover {
+        border-bottom-color: $color-orange;
+        i {
+          background: $color-orange;
+        }
+      }
+    }
+    .row > div:nth-child(1) .future-card {
+      margin-top: 0px;
+    }
+  }
+}
+
+/*=====================
+    13 Fun Facts
+=======================*/
+
+.fun-facts {
+  &.v1,
+  &.v2 {
+    .fun-fact-content {
+      @include d-flex;
+      @include align-items;
+      @include flex-wrap;
+      @include justify-content-between;
+      text-align: center;
+      gap: 30px;
+    }
+    li {
+      width: 100%;
+      .text-xl-2 ~ .text-xl-6 {
+        margin-top: 5px;
+      }
+    }
+  }
+  &.v1 {
+    li {
+      position: relative;
+      padding: 45px 25px;
+      border-radius: 5px;
+      background: $color-white3;
+      z-index: 1;
+      .text-xl-2,
+      .text-xl-6 {
+        @include transition;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: calc(100% + 22px);
+        top: -11px;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 5px;
+        background: $color-tr;
+        z-index: -1;
+        @include transition;
+      }
+      &:hover {
+        .text-xl-2,
+        .text-xl-6 {
+          color: $color-white;
+        }
+        &::before {
+          opacity: 1;
+          visibility: visible;
+          background: $color-orange;
+        }
+      }
+    }
+  }
+  &.v2 {
+    text-align: center;
+  }
+}
+
+/*=====================
+    15 Vedio Play
+=======================*/
+
+.vedio-play {
+  &.v1 {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+      background: $color-black;
+      z-index: 1;
+    }
+    img {
+      width: 100%;
+    }
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      &:hover {
+        color: $color-white;
+        &::before,
+        &::after {
+          background: $color-orange;
+        }
+        &::before {
+          border: 1px solid $color-orange;
+        }
+      }
+    }
+  }
+}

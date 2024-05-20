@@ -1,0 +1,154 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/autoprefixer" as *;
+
+/*=====================
+    28 Footer
+=======================*/
+.newsletter-subscrib {
+  &.v1 {
+    background: $color-black;
+    .newsletter-content {
+      .text-lg-3,
+      .text-lg-6 {
+        color: $color-white;
+      }
+    }
+    .content-right {
+      margin-top: 30px;
+      .newsletter {
+        @include d-flex;
+        @include justify-content-between;
+        input {
+          width: 100%;
+          padding-left: 30px;
+          font-size: 16px;
+          font-weight: 400;
+          height: 60px;
+          border-radius: 50px 0px 0px 50px;
+          background: $color-tr;
+          background: $color-white;
+        }
+        button {
+          padding: 0px 30px;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: capitalize;
+          color: $color-orange;
+          border-radius: 0px 50px 50px 0px;
+          background: $color-white;
+          &:hover {
+            color: $color-black;
+          }
+        }
+      }
+    }
+    & ~ .info-footer {
+      border-top: 1px solid $color-gBlack;
+    }
+  }
+}
+.info-footer {
+  &.v1 {
+    background: $color-black;
+    .info-footer-content {
+      .footer__widget ~ .footer__widget {
+        margin-top: 30px;
+      }
+    }
+    .footer__widget {
+      .footer__widget-title {
+        font-weight: 700;
+        color: $color-white;
+        & ~ .footer__widget-content {
+          margin-top: 30px;
+        }
+      }
+      .text-para-xl-1,
+      .text-para-xl-1 a {
+        color: $color-white;
+      }
+      .text-para-xl-1 a:hover {
+        color: $color-orange;
+      }
+    }
+    .footer-logo {
+      a,
+      img {
+        max-width: 180px;
+      }
+      a img {
+        width: 100%;
+      }
+      & ~ .text-para-xl-1 {
+        margin-top: 30px;
+      }
+    }
+    .text-para-xl-1 ~ .social-link {
+      margin-top: 30px;
+    }
+    .link-list {
+      li ~ li {
+        margin-top: 15px;
+      }
+      a {
+        position: relative;
+        color: $color-white;
+        font-size: 16px;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 16px;
+          height: 2px;
+          top: 10px;
+          left: 0;
+          opacity: 0;
+          background: $color-orange;
+          @include transition;
+        }
+        &:hover {
+          padding-left: 25px;
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .info-link {
+      li {
+        @include d-flex;
+        @include align-items;
+        @include flex-wrap;
+        gap: 15px;
+        & ~ li {
+          margin-top: 15px;
+        }
+      }
+      i {
+        font-size: 16px;
+        color: $color-white;
+      }
+    }
+    .row > div:nth-child(1) .footer__widget {
+      margin-top: 0;
+    }
+  }
+}
+
+.main-footer {
+  &.v1 {
+    border-top: 1px solid $color-gBlack;
+    background: $color-black;
+    .footer-content {
+      text-align: center;
+    }
+    .text-6 {
+      color: $color-white2;
+      a {
+        color: $color-white;
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+  }
+}
